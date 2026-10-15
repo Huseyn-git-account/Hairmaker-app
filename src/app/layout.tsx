@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config";
+import { assetPath } from "@/lib/assetPath";
 
 // Elegant serif for headings + clean sans for body.
 const display = Playfair_Display({
@@ -27,15 +28,15 @@ export const metadata: Metadata = {
     title: siteConfig.metadata.title,
     description: siteConfig.metadata.description,
     type: "website",
-    images: [{ url: "/og-cover.jpg", width: 1200, height: 630 }],
+    images: [{ url: assetPath("/og-cover.jpg"), width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.metadata.title,
     description: siteConfig.metadata.description,
-    images: ["/og-cover.jpg"],
+    images: [assetPath("/og-cover.jpg")],
   },
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: assetPath("/favicon.ico") },
 };
 
 export default function RootLayout({

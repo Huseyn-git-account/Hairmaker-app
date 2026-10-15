@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Send, MessageCircle, BadgeCheck } from "lucide-react";
 import { siteConfig } from "@/config";
+import { assetPath } from "@/lib/assetPath";
 import Reveal from "./Reveal";
 
 export default function Hero() {
@@ -68,7 +69,7 @@ export default function Hero() {
         <Reveal delay={0.15}>
           <div className="relative overflow-hidden rounded-[2rem] border border-gold-200/70 shadow-soft">
             <Image
-              src={hero.heroImage}
+              src={assetPath(hero.heroImage)}
               alt={hero.heroImageAlt}
               width={900}
               height={1100}

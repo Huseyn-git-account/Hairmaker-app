@@ -1,6 +1,7 @@
 // Results gallery — grid of before/after placeholders from /public/gallery.
 import Image from "next/image";
 import { siteConfig } from "@/config";
+import { assetPath } from "@/lib/assetPath";
 import Reveal from "./Reveal";
 
 export default function Gallery() {
@@ -28,7 +29,7 @@ export default function Gallery() {
               <figure className="group overflow-hidden rounded-3xl border border-gold-200/60 bg-white shadow-card">
                 <div className="relative">
                   <Image
-                    src={item.src}
+                    src={assetPath(item.src)}
                     alt={item.alt}
                     width={600}
                     height={700}
