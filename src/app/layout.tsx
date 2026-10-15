@@ -18,10 +18,11 @@ const body = Inter({
 });
 
 // Metadata is read from siteConfig — edit config.ts to update SEO.
+// metadataBase matches the GitHub Pages project URL for absolute OG links.
 export const metadata: Metadata = {
   title: siteConfig.metadata.title,
   description: siteConfig.metadata.description,
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://huseyn-git-account.github.io/Hairmaker-app/"),
   openGraph: {
     title: siteConfig.metadata.title,
     description: siteConfig.metadata.description,
